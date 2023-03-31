@@ -141,7 +141,7 @@ namespace Ponca {
 
 ///As the point cloud normals are constants, \f$v(\mathbf{x})\f$ is constant, its derivative is null, and so \f$  t'(\mathbf{x}) = \sum_i u'(\mathbf{x}) v(\mathbf{x}) = \sum_i w'_\mathbf{x}(\mathbf{p_i}) n_\mathbf{i} \f$.
 
-///Which leads to \f$n'(\mathbf{x}) = \frac{\sum_i w_\mathbf{x}(\mathbf{p_i})\sum_i w'_\mathbf{x}(\mathbf{p_i}) n_\mathbf{i}-\sum_i w_\mathbf{x}(\mathbf{p_i}) n_\mathbf{i}\sum_i w'_\mathbf{x}(\mathbf{p_i})}{\sum_i w_\mathbf{x}(\mathbf{p_i})}  \f$ 
+///Which leads to \f$n'(\mathbf{x}) = \frac{\sum_i w_\mathbf{x}(\mathbf{p_i})\sum_i w'_\mathbf{x}(\mathbf{p_i}) n_\mathbf{i}-\sum_i w_\mathbf{x}(\mathbf{p_i}) n_\mathbf{i}\sum_i w'_\mathbf{x}(\mathbf{p_i})}{\sum_i w_\mathbf{x}(\mathbf{p_i})^2}  \f$ 
 ///\\ Thus simplifying to \f$ n'(\mathbf{x}) = \frac{\sum_i w'_\mathbf{x}(\mathbf{p_i}) n_\mathbf{i} - n(\mathbf{x})\sum_i w'_\mathbf{x}(\mathbf{p_i})}{\sum_i w_\mathbf{x}(\mathbf{p_i})} \f$
 
     template<class DataPoint, class _WFunctor, int DiffType, typename T>
