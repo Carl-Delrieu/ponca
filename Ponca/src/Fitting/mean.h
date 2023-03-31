@@ -73,6 +73,9 @@ namespace Ponca {
         PONCA_EXPLICIT_CAST_OPERATORS(MeanNormal,meanNormal)
         PONCA_FITTING_DECLARE_INIT
         PONCA_FITTING_DECLARE_ADDNEIGHBOR
+        //! \brief Value of the Weighted mean normal at the location \f$ \mathbf{q} \f$
+        PONCA_MULTIARCH inline VectorType WeightedMeanNormal() const {
+            return (m_sumN / Base::m_sumW);
     }; //class MeanNormal
 
     template<class DataPoint, class _WFunctor, int DiffType, typename T>
